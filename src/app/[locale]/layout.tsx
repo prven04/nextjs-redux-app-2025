@@ -1,8 +1,10 @@
 // src/app/[locale]/layout.tsx
 import "../../app/globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@/components/navbar/navbar";
+import { Navbar } from "@/components/navbar/navbar"; // ✅ Make sure this path is correct
+
 import { getTranslations } from "@/lib/getTranslations";
+import Footer from "@/components/footer/footer";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -19,11 +21,12 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   const translations = await getTranslations(locale, "navBar");
-
+  console.log("Menu Items", translations);
   return (
     <>
       <Navbar t={translations} locale={locale} />
       {children}
+      <Footer />
     </>
   );
 }

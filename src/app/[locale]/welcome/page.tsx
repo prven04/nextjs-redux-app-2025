@@ -9,6 +9,7 @@ type PageProps = {
 
 export default async function Page({ params }: PageProps) {
   const { locale } = await params;
-  const translations = getTranslations(locale, "welcome");
+  const translations = await getTranslations(locale, "welcome");
+  console.log("translations", locale);
   return <Welcome t={translations} />;
 }

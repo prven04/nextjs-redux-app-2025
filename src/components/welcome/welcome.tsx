@@ -6,7 +6,8 @@ type Props = {
   };
 };
 
-export function Welcome({ t }: any) {
+export function Welcome({ t }: Props) {
+  console.log("T", t);
   return (
     <>
       Welcome Here...!{t.title}
