@@ -17,50 +17,50 @@ export function Dashboard({ t }: DashboardProps) {
 
   return (
     <>
-      <>
-        <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-6 py-16 px-12 bg-white dark:bg-black rounded-xl shadow-md">
-          {/* Left Content */}
-          <div className="flex-1 space-y-4  md:text-left">
-            <div>
-              <p className="text-gray-700 dark:text-gray-400">{t.hi}</p>
-              <h2 className="text-[48px] font-bold text-gray-900 dark:text-white leading-tight">
-                {t.name}
-              </h2>
-              <h3 className="text-[20px] text-gray-600 dark:text-gray-300 font-medium">
-                {t.designation}
-              </h3>
-            </div>
+      <div className="bg-white dark:bg-black rounded-xl shadow-md py-16 px-6 md:px-12">
+        {/* Two-column layout */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+          {/* Left Column: hi, name, designation, objective */}
+          <div className="md:w-[70%] w-full space-y-4 text-center md:text-left">
+            <p className="text-gray-700 dark:text-gray-400">{t.hi}</p>
 
-            {/* Image for mobile (will appear below name on mobile, hidden on desktop) */}
+            <h2 className="text-[32px] md:text-[48px] font-bold text-gray-900 dark:text-white leading-tight">
+              {t.name}
+            </h2>
+
+            <h3 className="text-[18px] md:text-[20px] text-gray-600 dark:text-gray-300 font-medium">
+              {t.designation}
+            </h3>
+
+            {/* Mobile Image in between text */}
             <div className="md:hidden flex justify-center">
               <img
-                src="/my_pic.jpg"
+                src="/my_pic_2.jpg"
                 alt="Praveen Here!"
-                className="w-36 h-36 rounded-full object-cover border-4 border-blue-500 shadow-lg"
+                className="w-48 h-48 rounded-full object-cover border-4 border-blue-500 shadow-lg"
               />
             </div>
 
-            {/* Objective Content */}
             <p className="text-[16px] text-gray-700 dark:text-gray-400 leading-relaxed">
               {t.objective}
             </p>
-
-            {/* Social Links */}
-            <div className="mt-6">
-              <SocialLinks />
-            </div>
           </div>
 
-          {/* Desktop-only image */}
-          <div className="hidden md:block flex-shrink-0">
+          {/* Right Column: Desktop Image only */}
+          <div className="hidden md:flex md:w-[30%] items-center justify-center">
             <img
-              src="/my_pic.jpg"
+              src="/my_pic_2.jpg"
               alt="Praveen Here!"
-              className="w-48 h-48 rounded-full object-cover border-4 border-blue-500 shadow-lg"
+              className="w-60 h-60 rounded-full object-cover border-4 border-blue-500 shadow-lg"
             />
           </div>
         </div>
-      </>
+
+        {/* Social Links always full width and centered */}
+        <div className="mt-8 w-full flex justify-center">
+          <SocialLinks />
+        </div>
+      </div>
     </>
   );
 }

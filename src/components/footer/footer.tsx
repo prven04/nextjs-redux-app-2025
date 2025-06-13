@@ -21,7 +21,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-400 text-sm px-8 py-6 text-center">
+    <footer className="bg-gray-900 text-gray-400 text-sm px-8 py-6 text-center mt-auto">
       © 2025 Praveen Kumar. All rights reserved.
       {/* <button
         onClick={toggleLanguage}
