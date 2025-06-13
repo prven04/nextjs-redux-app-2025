@@ -41,7 +41,7 @@ export function Dashboard({ t }: DashboardProps) {
               />
             </div>
 
-            <p className="text-[16px] text-gray-700 dark:text-gray-400 leading-relaxed">
+            <p className="text-[16px] text-gray-700 dark:text-gray-400 leading-relaxed text-left text-justify md:text-left">
               {t.objective}
             </p>
           </div>
