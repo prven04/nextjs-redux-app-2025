@@ -43,7 +43,7 @@ export function SocialLinks() {
           <Linkedin size={24} />
         </a>
         <a
-          href="https://instagram.com/yourprofile"
+          href="https://www.instagram.com/prven04?igsh=MWMwbDQ3YXB2YmpqMA%3D%3D&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -52,7 +52,7 @@ export function SocialLinks() {
           <Instagram size={24} />
         </a>
         <a
-          href="https://twitter.com/yourprofile"
+          href="https://x.com/alugoju_praveen?s=11&t=rzFGLbDym5dX7zBzQrqhAQ"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"
@@ -61,7 +61,7 @@ export function SocialLinks() {
           <Twitter size={24} />
         </a>
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:prven04l@gmail.com"
           className="hover:text-green-500 transition"
           aria-label="Email"
         >
