@@ -1,23 +1,16 @@
-// src/app/[locale]/layout.tsx
 import "../../app/globals.css";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/navbar/navbar"; // ✅ Make sure this path is correct
 
 import { getTranslations } from "@/lib/getTranslations";
 import Footer from "@/components/footer/footer";
-
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { PageProps } from "@/types/common";
 
 export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: any;
 }) {
   const { locale } = await params;
   const translations = await getTranslations(locale, "navBar");
