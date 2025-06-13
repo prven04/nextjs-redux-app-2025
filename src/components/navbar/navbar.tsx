@@ -33,7 +33,7 @@ export function Navbar({ locale, t }: Props) {
 
   return (
     <header className="bg-gray-900 text-white px-6 py-4 shadow-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="mx-auto flex items-center justify-between">
         {/* Left: Home Icon */}
         <Link
           href={`/${locale}/dashboard`}
