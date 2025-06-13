@@ -32,7 +32,7 @@ export function Contact() {
             <strong>Location:</strong> Hyderabad, India
           </li>
           <li>
-            <strong>LinkedIn:</strong>{" "}
+            <strong>LinkedIn:</strong>
             <a
               href="https://linkedin.com/in/prven04"
               target="_blank"
